@@ -1,8 +1,11 @@
 {
-  "name": "back",
+  "name": "online-cinema",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Online cinema application",
+  "author": {
+    "email": "varlamcheg@inbox.ru",
+    "name": "ZZZaratustra"
+  },
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -10,9 +13,9 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
+    "dev": "nest start --watch",
+    "debug": "nest start --debug --watch",
+    "prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -22,8 +25,13 @@
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.0",
+    "@nestjs/jwt": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "@typegoose/typegoose": "^9.12.1",
+    "mongoose": "^6.6.7",
+    "nestjs-typegoose": "^7.1.38",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0"
@@ -34,6 +42,7 @@
     "@nestjs/testing": "^9.0.0",
     "@types/express": "^4.17.13",
     "@types/jest": "28.1.8",
+    "@types/mongoose": "^5.11.97",
     "@types/node": "^16.0.0",
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
